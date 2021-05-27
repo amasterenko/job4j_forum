@@ -1,6 +1,5 @@
 <%@ page contentType="text/html;charset=UTF-8" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<%@taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
 <!doctype html>
 <html>
 <head>
@@ -25,29 +24,39 @@
     <div class="row p-4">
         <div class="col-md-6 offset-md-3">
             <div class="row p-4">
-                <div class="col text-center"><h4>Edit post #${post.id}:</h4></div>
+                <div class="col text-center"><h4>Registration:</h4></div>
             </div>
+
             <div class="row justify-content-center">
-                <form action="<c:url value='/save?id=${post.id}'/>" method='POST' class="was-validated">
+                <form action="<c:url value='/reg'/>" method='POST'>
+                    <c:if test="${not empty errorMessage}">
+                        <div class="alert alert-warning d-flex align-items-center" role="alert">
+                                ${errorMessage}
+                        </div>
+                    </c:if>
                     <div class="row py-2">
                         <div class="col">
-                            <label for="inputName">Title</label>
-                            <input type="text" value="<c:out value="${post.name}"/>" name="name" id="inputName"
-                                   class="form-control form-control-sm"
-                                   placeholder="post title" required>
+                            <label for="userName">User name</label>
+                            <input type="text" name="username" id="userName" class="form-control form-control-sm"
+                                   placeholder="user name" required>
                         </div>
                     </div>
                     <div class="row py-2">
                         <div class="col">
-                            <label for="inputText">Description</label>
-                            <textarea class="form-control form-control-sm" rows=2 name="desc" id="inputText"
-                                      placeholder="Description" required> <c:out value="${post.desc}"/>
-                            </textarea>
+                            <label for="inputPwd">Password</label>
+                            <input type="text" name="password" id="inputPwd" class="form-control form-control-sm"
+                                   placeholder="password" minlength="6" required>
                         </div>
                     </div>
-                    <div class="d-flex p-2"></div>
-                    <button class="btn btn-lg btn-outline-dark btn-block" id="submit" type="submit">Save</button>
-                    <a href="<%=request.getContextPath()%>/" class="btn btn-lg btn-secondary btn-block" role="button">Cancel</a>
+                    <div class="d-flex p-2 justify-content-center">
+                        <a href="<c:url value='/login'/>"><small>Login</small></a>
+                    </div>
+                    <div class="row py-2">
+                        <div class="col">
+                            <button class="btn btn-lg btn-outline-dark btn-block" id="submit" type="submit">Submit
+                            </button>
+                        </div>
+                    </div>
                 </form>
             </div>
         </div>
@@ -55,3 +64,4 @@
 </div>
 </body>
 </html>
+

@@ -28,16 +28,16 @@
         <div class="col-md-6 offset-md-3">
             <div class="card">
                 <div class="card-header">
-                    ${post.name}
                     <a href='<c:url value="/update?id=${post.id}"/>' title="Edit">
                         <i class="fa fa-edit mr-3"></i>
                     </a>
+                    ${post.name}
                 </div>
                 <div class="card-body">
                     <p class="card-text">${post.desc}</p>
                 </div>
                 <div class="col text-right px-md-5">
-                    <p class="text-muted"><small>Created: <fmt:formatDate value="${post.created}" pattern="dd-MMM-yyyy hh:mm"/></small></p>
+                    <p class="text-muted"><small>Created: <fmt:formatDate value="${post.created}" pattern="dd-MMM-yyyy HH:mm"/></small></p>
                 </div>
             </div>
             <div class="row p-4">

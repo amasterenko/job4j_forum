@@ -48,7 +48,7 @@
                     <td><a href='<c:url value="/read?id=${post.id}"/>' ><c:out value="${post.name}"/></a></td>
                     <td><a href='<c:url value="/read?id=${post.id}"/>' ><c:out value="${post.desc}"/></a></td>
                     <td><a href='<c:url value="/read?id=${post.id}"/>' >
-                        <fmt:formatDate value="${post.created}" pattern="dd-MMM-yyyy hh:mm"/></a></td>
+                        <fmt:formatDate value="${post.created}" pattern="dd-MMM-yyyy HH:mm"/></a></td>
                 </tr>
             </c:forEach>
             </tbody>

@@ -1,25 +1,22 @@
 package ru.job4j.forum.service;
 
 import org.springframework.stereotype.Service;
-import ru.job4j.forum.model.Post;
 import ru.job4j.forum.model.User;
-
-import java.util.*;
-import java.util.concurrent.ConcurrentHashMap;
+import ru.job4j.forum.store.UserRepository;
 
 @Service
 public class UserService {
-    private final Map<String, User> users = new ConcurrentHashMap<>();
+    private UserRepository users;
 
-    public UserService() {
-        users.put("user1", User.of("user1", "123"));
+    public UserService(UserRepository users) {
+        this.users = users;
     }
 
     public void save(User user) {
-        users.put(user.getUsername(), user);
+        users.save(user);
     }
 
     public User findByUsername(String name) {
-        return users.get(name);
+        return users.findByUsername(name);
     }
 }

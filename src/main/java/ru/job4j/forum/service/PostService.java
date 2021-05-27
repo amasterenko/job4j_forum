@@ -2,37 +2,32 @@ package ru.job4j.forum.service;
 
 import org.springframework.stereotype.Service;
 import ru.job4j.forum.model.Post;
+import ru.job4j.forum.store.PostRepository;
 
-import java.util.Collection;
-import java.util.Date;
-import java.util.Map;
-import java.util.concurrent.ConcurrentHashMap;
-import java.util.concurrent.atomic.AtomicInteger;
+import java.util.*;
 
 @Service
 public class PostService {
+    private final PostRepository posts;
 
-    private final Map<Integer, Post> posts = new ConcurrentHashMap<>();
-    private final AtomicInteger index = new AtomicInteger(2);
-
-    public PostService() {
-        posts.put(1, Post.of(1, "Post 1", "It's a very interesting description.."));
-        posts.put(2, Post.of(2, "Post 2", "Not a very interesting description.."));
+    public PostService(PostRepository posts) {
+        this.posts = posts;
     }
 
     public void save(Post post) {
         if (post.getId() == 0) {
-            post.setId(index.incrementAndGet());
             post.setCreated(new Date(System.currentTimeMillis()));
         }
-        posts.put(post.getId(), post);
+        posts.save(post);
     }
 
-    public Collection<Post> getAll() {
-        return posts.values();
+    public List<Post> getAll() {
+        List<Post> res = new ArrayList<>();
+        posts.findAll().forEach(res::add);
+        return res;
     }
 
     public Post findById(int id) {
-        return posts.get(id);
+        return posts.findById(id).orElse(null);
     }
 }
