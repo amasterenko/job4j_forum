@@ -66,9 +66,26 @@
       <artifactId>spring-boot-starter-test</artifactId>
       <scope>test</scope>
     </dependency>
-
+    <dependency>
+      <groupId>org.springframework.security</groupId>
+      <artifactId>spring-security-test</artifactId>
+      <scope>test</scope>
+    </dependency>
   </dependencies>
-
+<profiles>
+  <profile>
+    <id>travis</id>
+    <activation>
+      <activeByDefault>true</activeByDefault>
+    </activation>
+    <properties>
+      <db.url>jdbc:postgresql://localhost/forum</db.url>
+      <db.username>postgres</db.username>
+      <db.password></db.password>
+      <db.driver>org.postgresql.Driver</db.driver>
+    </properties>
+  </profile>
+</profiles>
   <build>
     <plugins>
       <plugin>

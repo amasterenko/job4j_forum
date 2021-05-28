@@ -11,7 +11,7 @@ import ru.job4j.forum.service.PostService;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 /**
- *Class-controller provides the views of post's CRUD pages.
+ *Class-controller provides the views of post's create/read/update pages.
  *
  *@author AndrewMs
  *@version 1.0
@@ -31,7 +31,7 @@ public class PostControl {
 
     @GetMapping("/read")
     public String read(@RequestParam("id") int id, Model model) {
-        model.addAttribute(posts.findById(id));
+        model.addAttribute("posts", posts.findById(id));
         return "post/post";
     }
 
@@ -46,12 +46,5 @@ public class PostControl {
         Post post = posts.findById(id);
         model.addAttribute("post", post);
         return "post/update";
-    }
-
-    @InitBinder
-    public void initBinder(WebDataBinder binder) {
-        binder.registerCustomEditor(Date.class,
-                new CustomDateEditor(new SimpleDateFormat("EEE MMM dd HH:mm:ss z yyyy"),
-                        true));
     }
 }
