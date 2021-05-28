@@ -2,7 +2,12 @@ package ru.job4j.forum.model;
 
 import javax.persistence.*;
 import java.util.Objects;
-
+/**
+ *Class represents the system user model.
+ *
+ *@author AndrewMs
+ *@version 1.0
+ */
 @Entity
 @Table(name = "users")
 public class User {

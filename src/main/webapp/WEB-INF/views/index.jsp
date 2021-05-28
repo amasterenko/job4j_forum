@@ -22,18 +22,20 @@
         <h4>Forum job4j</h4>
     </div>
     <div class="row">
-        <ul class="nav float-left">
-            <li class="nav-item active">
-                <a class="nav-link" href="<c:url value='/create'/>">New post</a>
-            </li>
-        </ul>
-        <ul class="nav float-right">
-            <c:if test="${user != null}">
+        <div class="col">
+            <ul class="nav float-left">
                 <li class="nav-item active">
-                    <a class="nav-link" href="<c:url value='/logout'/>">${user.username} | logout</a>
+                    <a class="nav-link" href="<c:url value='/create'/>">New post</a>
                 </li>
-            </c:if>
-        </ul>
+            </ul>
+            <ul class="nav float-right">
+                <c:if test="${user != null}">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="<c:url value='/logout'/>">${user.username} | logout</a>
+                    </li>
+                </c:if>
+            </ul>
+        </div>
         <table class="table">
             <thead>
             <tr>

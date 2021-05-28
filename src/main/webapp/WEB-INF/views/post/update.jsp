@@ -47,7 +47,7 @@
                     </div>
                     <div class="d-flex p-2"></div>
                     <button class="btn btn-lg btn-outline-dark btn-block" id="submit" type="submit">Save</button>
-                    <a href="<%=request.getContextPath()%>/" class="btn btn-lg btn-secondary btn-block" role="button">Cancel</a>
+                    <a href="<%=request.getContextPath()%>/index" class="btn btn-lg btn-secondary btn-block" role="button">Cancel</a>
                 </form>
             </div>
         </div>

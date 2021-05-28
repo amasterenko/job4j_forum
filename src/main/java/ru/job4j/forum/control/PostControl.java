@@ -10,7 +10,12 @@ import ru.job4j.forum.service.PostService;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
-
+/**
+ *Class-controller provides the views of post's CRUD pages.
+ *
+ *@author AndrewMs
+ *@version 1.0
+ */
 @Controller
 public class PostControl {
     private final PostService posts;
@@ -33,7 +38,7 @@ public class PostControl {
     @PostMapping("/save")
     public String save(@ModelAttribute Post post) {
         posts.save(post);
-        return "redirect:/";
+        return "redirect:/index";
     }
 
     @GetMapping("/update")

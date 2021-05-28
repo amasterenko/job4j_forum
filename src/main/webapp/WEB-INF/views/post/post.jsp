@@ -41,7 +41,7 @@
                 </div>
             </div>
             <div class="row p-4">
-                <div class="col text-center"> <a href="${pageContext.request.contextPath}/" >Posts</a></div>
+                <div class="col text-center"> <a href="${pageContext.request.contextPath}/index" >Posts</a></div>
             </div>
         </div>
     </div>

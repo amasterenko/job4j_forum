@@ -3,7 +3,12 @@ package ru.job4j.forum.model;
 import javax.persistence.*;
 import java.util.Date;
 import java.util.Objects;
-
+/**
+ *Class represents the post model.
+ *
+ *@author AndrewMs
+ *@version 1.0
+ */
 @Entity
 @Table(name = "posts")
 public class Post {

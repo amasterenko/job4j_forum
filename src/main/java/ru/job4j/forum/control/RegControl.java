@@ -1,5 +1,6 @@
 package ru.job4j.forum.control;
 
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -7,13 +8,21 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 import ru.job4j.forum.model.User;
 import ru.job4j.forum.service.UserService;
-
+/**
+ *Class-controller provides the views of user registration page
+ * and serves POST-requests for a new user registration.
+ *
+ *@author AndrewMs
+ *@version 1.0
+ */
 @Controller
 public class RegControl {
     private final UserService users;
+    private final PasswordEncoder encoder;
 
-    public RegControl(UserService users) {
+    public RegControl(UserService users, PasswordEncoder encoder) {
         this.users = users;
+        this.encoder = encoder;
     }
 
     @PostMapping("/reg")
@@ -24,6 +33,7 @@ public class RegControl {
             model.addAttribute("errorMessage", errorMessage);
             return "reg";
         }
+        user.setPassword(encoder.encode(user.getPassword()));
         users.save(user);
         return "redirect:/login";
     }

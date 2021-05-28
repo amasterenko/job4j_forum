@@ -4,6 +4,12 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.boot.web.servlet.support.SpringBootServletInitializer;
+/**
+ *Class runs the Spring Boot application.
+ *
+ *@author AndrewMs
+ *@version 1.0
+ */
 
 @SpringBootApplication
 public class Main extends SpringBootServletInitializer {
