@@ -35,26 +35,27 @@
                     </li>
                 </c:if>
             </ul>
-        </div>
-        <table class="table">
-            <thead>
-            <tr>
-                <th scope="col">Topic</th>
-                <th scope="col">Description</th>
-                <th scope="col">Created</th>
-            </tr>
-            </thead>
-            <tbody>
-            <c:forEach items="${posts}" var="post">
+
+            <table class="table">
+                <thead>
                 <tr>
-                    <td><a href='<c:url value="/read?id=${post.id}"/>' ><c:out value="${post.name}"/></a></td>
-                    <td><a href='<c:url value="/read?id=${post.id}"/>' ><c:out value="${post.desc}"/></a></td>
-                    <td><a href='<c:url value="/read?id=${post.id}"/>' >
-                        <fmt:formatDate value="${post.created}" pattern="dd-MMM-yyyy HH:mm"/></a></td>
+                    <th scope="col">Topic</th>
+                    <th scope="col">Description</th>
+                    <th scope="col">Created</th>
                 </tr>
-            </c:forEach>
-            </tbody>
-        </table>
+                </thead>
+                <tbody>
+                <c:forEach items="${posts}" var="post">
+                    <tr>
+                        <td><a href='<c:url value="/read?id=${post.id}"/>'><c:out value="${post.name}"/></a></td>
+                        <td><a href='<c:url value="/read?id=${post.id}"/>'><c:out value="${post.desc}"/></a></td>
+                        <td><a href='<c:url value="/read?id=${post.id}"/>'>
+                            <fmt:formatDate value="${post.created}" pattern="dd-MMM-yyyy HH:mm"/></a></td>
+                    </tr>
+                </c:forEach>
+                </tbody>
+            </table>
+        </div>
     </div>
 </div>
 

@@ -1,5 +1,6 @@
 package ru.job4j.forum.service;
 
+import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
 import ru.job4j.forum.model.Post;
 import ru.job4j.forum.store.PostRepository;
@@ -27,9 +28,7 @@ public class PostService {
     }
 
     public List<Post> getAll() {
-        List<Post> res = new ArrayList<>();
-        posts.findAll().forEach(res::add);
-        return res;
+        return new ArrayList<>(posts.findAllByOrderByIdAsc());
     }
 
     public Post findById(int id) {
