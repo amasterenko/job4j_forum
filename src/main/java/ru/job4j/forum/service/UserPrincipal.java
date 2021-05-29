@@ -7,7 +7,7 @@ import ru.job4j.forum.model.User;
 import java.util.Collection;
 import java.util.List;
 /**
- *Class-wrapper that is returned by "loadUserByUsername" method
+ *Class-wrapper which is returned by "loadUserByUsername" method
  *of UserService class.
  *
  *@author AndrewMs
