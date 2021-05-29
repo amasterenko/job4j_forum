@@ -1,5 +1,6 @@
 # Forum
-[![Build Status](https://travis-ci.com/amasterenko/job4j_forum.svg?branch=main)](https://travis-ci.com/amasterenko/job4j_forum)  
+[![Build Status](https://travis-ci.com/amasterenko/job4j_forum.svg?branch=master)](https://travis-ci.com/amasterenko/job4j_forum)
+[![codecov](https://codecov.io/gh/amasterenko/job4j_forum/branch/master/graph/badge.svg?token=H35M5WCTZQ)](https://codecov.io/gh/amasterenko/job4j_forum)  
 ____ 
 
 This project demonstrates the principles of following technologies:

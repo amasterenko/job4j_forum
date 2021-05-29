@@ -19,7 +19,7 @@ public class IndexControl {
         this.posts = posts;
     }
 
-    @GetMapping("/index")
+    @GetMapping({"/", "/index"})
     public String index(Model model) {
         model.addAttribute("posts", posts.getAll());
         model.addAttribute("user", SecurityContextHolder

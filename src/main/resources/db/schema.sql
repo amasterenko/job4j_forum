@@ -4,7 +4,6 @@ create table posts (
                        description text,
                        created timestamp not null default now()
 );
-
 create table users (
                        id serial primary key,
                        username VARCHAR(50) NOT NULL unique,
