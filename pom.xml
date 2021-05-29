@@ -7,7 +7,6 @@
   <groupId>ru.job4j</groupId>
   <artifactId>forum</artifactId>
   <version>1.0</version>
-  <packaging>jar</packaging>
 
   <parent>
     <groupId>org.springframework.boot</groupId>
@@ -96,6 +95,25 @@
       <plugin>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-maven-plugin</artifactId>
+      </plugin>
+      <plugin>
+        <groupId>org.jacoco</groupId>
+        <artifactId>jacoco-maven-plugin</artifactId>
+        <version>0.8.6</version>
+        <executions>
+          <execution>
+            <goals>
+              <goal>prepare-agent</goal>
+            </goals>
+          </execution>
+          <execution>
+            <id>report</id>
+            <phase>test</phase>
+            <goals>
+              <goal>report</goal>
+            </goals>
+          </execution>
+        </executions>
       </plugin>
     </plugins>
   </build>
