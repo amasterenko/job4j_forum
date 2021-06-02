@@ -11,7 +11,7 @@ import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 /**
  *Class enables HTTP Security.
- *There is used a custom UserDetailsService implementation for retrieving user-related data.
+ *Class uses a custom UserDetailsService implementation to retrieve user-related data.
  *
  *@author AndrewMs
  *@version 1.0
