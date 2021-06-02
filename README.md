@@ -8,6 +8,9 @@ This project demonstrates the principles of following technologies:
 - JSP/JSTL  
 - Bootstrap  
 - PostgreSQL  
+- Liquibase  
+- Travis  
+- Codecov  
 
 The project also shows how to create a custom database-backed UserDetailsService for authentication with Spring Security.  
 
