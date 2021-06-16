@@ -19,10 +19,7 @@
 <body>
 <div class="container mt-3">
     <div class="row">
-       <div class="col text-center">
-            <img class="d-block mx-auto mb-4" src="/img/logo.png" alt="" width="72" height = "72">
-            <h4>Job4j Forum</h4>
-        </div>
+        <h4>Forum job4j</h4>
     </div>
     <div class="row">
         <div class="col">

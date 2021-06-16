@@ -26,31 +26,22 @@
 <div class="container-fluid">
     <div class="row p-4">
         <div class="col-md-6 offset-md-3">
-            <div class="row p-2 justify-content-center">
-                <div class="col text-center">
-                    <img class="d-block mx-auto mb-4" src="/img/logo.png" alt="" width="72" height = "72">
-                    <h4>Job4j Forum</h4>
+            <div class="card">
+                <div class="card-header">
+                    <a href='<c:url value="/update?id=${post.id}"/>' title="Edit">
+                        <i class="fa fa-edit mr-3"></i>
+                    </a>
+                    ${post.name}
                 </div>
-            </div>
-            <div class="row p-2 justify-content-center">
-                <div class="card">
-                    <div class="card-header">
-                        <a href='<c:url value="/update?id=${post.id}"/>' title="Edit">
-                            <i class="fa fa-edit mr-3"></i>
-                        </a>
-                        ${post.name}
-                    </div>
-                    <div class="card-body">
-                        <p class="card-text">${post.desc}</p>
-                    </div>
-                    <div class="col text-right px-md-5">
-                        <p class="text-muted"><small>Created: <fmt:formatDate value="${post.created}"
-                                                                              pattern="dd-MMM-yyyy HH:mm"/></small></p>
-                    </div>
+                <div class="card-body">
+                    <p class="card-text">${post.desc}</p>
+                </div>
+                <div class="col text-right px-md-5">
+                    <p class="text-muted"><small>Created: <fmt:formatDate value="${post.created}" pattern="dd-MMM-yyyy HH:mm"/></small></p>
                 </div>
             </div>
             <div class="row p-4">
-                <div class="col text-center"> <a href="${pageContext.request.contextPath}/index" >Back to the posts</a></div>
+                <div class="col text-center"> <a href="${pageContext.request.contextPath}/index" >Posts</a></div>
             </div>
         </div>
     </div>

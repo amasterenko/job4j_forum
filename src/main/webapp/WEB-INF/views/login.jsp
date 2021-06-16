@@ -23,21 +23,17 @@
 <div class="container-fluid">
   <div class="row p-4">
     <div class="col-md-6 offset-md-3">
-      <div class="row p-2 justify-content-center">
-        <h4>Job4j Forum</h4>
+      <div class="row p-4">
+        <div class="col text-center"><h4>Login:</h4></div>
       </div>
-      <div class="row p-2 justify-content-center">
-        <h5>Login:</h5>
-      </div>
-      <div class="row p-2 justify-content-center">
-        <c:if test="${not empty errorMessage}">
-          <div class="alert alert-warning d-flex align-items-center" role="alert">
-              ${errorMessage}
-          </div>
-        </c:if>
-      </div>
+
       <div class="row justify-content-center">
         <form action="<c:url value='/login'/>" method='POST'>
+          <c:if test="${not empty errorMessage}">
+            <div class="alert alert-warning d-flex align-items-center" role="alert">
+                ${errorMessage}
+            </div>
+          </c:if>
           <div class="row py-2">
             <div class="col">
               <label for="userName">User name</label>

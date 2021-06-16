@@ -22,16 +22,10 @@
 </head>
 <body>
 <div class="container-fluid">
-    <div class="row p-2">
+    <div class="row p-4">
         <div class="col-md-6 offset-md-3">
-            <div class="row p-2 justify-content-center">
-                <div class="col text-center">
-                    <img class="d-block mx-auto mb-4" src="/img/logo.png" alt="" width="72" height = "72">
-                    <h4>Job4j Forum</h4>
-                </div>
-            </div>
-            <div class="row p-2 justify-content-center">
-                <h5>Edit post #${post.id}:</h5>
+            <div class="row p-4">
+                <div class="col text-center"><h4>Edit post #${post.id}:</h4></div>
             </div>
             <div class="row justify-content-center">
                 <form action="<c:url value='/save?id=${post.id}'/>" method='POST' class="was-validated">
@@ -53,7 +47,7 @@
                     </div>
                     <div class="d-flex p-2"></div>
                     <button class="btn btn-lg btn-outline-dark btn-block" id="submit" type="submit">Save</button>
-                    <a href="<%=request.getContextPath()%>/read?id=${post.id}" class="btn btn-lg btn-secondary btn-block" role="button">Cancel</a>
+                    <a href="<%=request.getContextPath()%>/index" class="btn btn-lg btn-secondary btn-block" role="button">Cancel</a>
                 </form>
             </div>
         </div>
