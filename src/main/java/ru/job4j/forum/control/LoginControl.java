@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.*;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 /**
- *Class-controller provides the view of the login page and serves requests for logout.
+ *Class-controller provides the view of the login page and handles requests for logout.
  *
  *@author AndrewMs
  *@version 1.0

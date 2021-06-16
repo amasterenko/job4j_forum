@@ -10,7 +10,7 @@ import ru.job4j.forum.model.User;
 import ru.job4j.forum.service.UserService;
 /**
  *Class-controller provides the views of user registration page
- * and serves POST-requests for a new user registration.
+ * and handles POST-requests for user registration.
  *
  *@author AndrewMs
  *@version 1.0
