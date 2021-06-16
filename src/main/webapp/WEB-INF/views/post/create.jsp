@@ -23,8 +23,12 @@
 <div class="container-fluid">
     <div class="row p-4">
         <div class="col-md-6 offset-md-3">
-            <div class="row p-4">
-                <div class="col text-center"><h4>New post:</h4></div>
+            <div class="row p-2">
+                <img class="d-block mx-auto mb-4" src="/img/logo.png" alt="" width="72" height = "72">
+                <h4>Job4j Forum</h4>
+            </div>
+            <div class="row p-2">
+                <h5>New post:</h5>
             </div>
             <div class="row justify-content-center">
                 <form action="<c:url value='/save'/>" method='POST' class="was-validated">

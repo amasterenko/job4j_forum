@@ -8,11 +8,14 @@ The [project](https://dry-peak-39975.herokuapp.com) demonstrates the principles 
 - JSP/JSTL  
 - Bootstrap  
 - PostgreSQL  
+- Liquibase  
+- Travis  
+- Codecov  
 
 The project shows how to create a custom database-backed UserDetailsService for authentication with Spring Security.  
 
 ### Features:  
 ____  
-- User's authentication  
+- User authentication  
 - Creating/updating posts  
 
