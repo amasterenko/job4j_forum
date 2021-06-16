@@ -7,8 +7,8 @@ import org.springframework.stereotype.Service;
 import ru.job4j.forum.model.User;
 import ru.job4j.forum.store.UserRepository;
 /**
- *The class represents a service layer and using for managing User entities.
- *It is also used to retrieve user-related data for Spring Http Security.
+ * The class represents a service layer, and it is used for managing User entities
+ * and for retrieving user-related data for Spring Http Security.
  *
  *@author AndrewMs
  *@version 1.0
