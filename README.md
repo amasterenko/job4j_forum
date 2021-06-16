@@ -3,7 +3,7 @@
 [![codecov](https://codecov.io/gh/amasterenko/job4j_forum/branch/master/graph/badge.svg?token=H35M5WCTZQ)](https://codecov.io/gh/amasterenko/job4j_forum)  
 ____ 
 
-The [project](https://dry-peak-39975.herokuapp.com) demonstrates the principles of following technologies:
+The [project](https://dry-peak-39975.herokuapp.com) demonstrates principles of the following technologies:
 - Spring Boot (Web, Data, Security)   
 - JSP/JSTL  
 - Bootstrap  
