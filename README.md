@@ -30,5 +30,24 @@ The project shows how to create a custom database-backed UserDetailsService for 
 ![registartion](img/forum_new_post.png)    
 ![registartion](img/forum_post_edit.png)  
 ![log in](img/forum_login.png)    
-![registartion](img/forum_registration.png)    
+![registartion](img/forum_registration.png)   
 
+### Configuration:
+Create a PostgreSQL database with the name _forum_ and set the DB credentials to _/resources/application.properties_.
+The default ones are :
+```
+spring.datasource.url=jdbc:postgresql://127.0.0.1:5432/forum
+spring.datasource.username=postgres
+spring.datasource.password=password
+spring.datasource.driver-class-name=org.postgresql.Driver
+```
+
+### Usage
+Build the JAR file with
+```
+mvn clean package
+```
+and then run the JAR file, as follows:
+```
+java -jar target/forum-1.0.jar  
+```
