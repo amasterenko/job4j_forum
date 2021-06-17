@@ -6,10 +6,10 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import ru.job4j.forum.service.PostService;
 /**
- *Class-controller provides the view of the index page.
+ * Class-controller provides the view of the index page.
  *
- *@author AndrewMs
- *@version 1.0
+ * @author AndrewMs
+ * @version 1.0
  */
 @Controller
 public class IndexControl {

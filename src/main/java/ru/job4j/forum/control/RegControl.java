@@ -9,11 +9,11 @@ import org.springframework.web.bind.annotation.PostMapping;
 import ru.job4j.forum.model.User;
 import ru.job4j.forum.service.UserService;
 /**
- *Class-controller provides the views of user registration page
+ * Class-controller provides the views of user registration page
  * and handles POST-requests for user registration.
  *
- *@author AndrewMs
- *@version 1.0
+ * @author AndrewMs
+ * @version 1.0
  */
 @Controller
 public class RegControl {

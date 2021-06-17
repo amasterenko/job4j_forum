@@ -9,10 +9,10 @@ import ru.job4j.forum.service.PostService;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 /**
- *Class-controller provides the views of post create/read/update pages.
+ * Class-controller provides the views of post create/read/update pages.
  *
- *@author AndrewMs
- *@version 1.0
+ * @author AndrewMs
+ * @version 1.0
  */
 @Controller
 public class PostControl {

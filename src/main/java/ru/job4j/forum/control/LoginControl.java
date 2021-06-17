@@ -9,10 +9,10 @@ import org.springframework.web.bind.annotation.*;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 /**
- *Class-controller provides the view of the login page and handles requests for logout.
+ * Class-controller provides the view of the login page and handles requests for logout.
  *
- *@author AndrewMs
- *@version 1.0
+ * @author AndrewMs
+ * @version 1.0
  */
 @Controller
 public class LoginControl {
@@ -22,10 +22,10 @@ public class LoginControl {
                             Model model) {
         String errorMessge = null;
         if (error != null) {
-            errorMessge = "Username or Password is incorrect !!";
+            errorMessge = "Username or password is incorrect !";
         }
         if (logout != null) {
-            errorMessge = "You have been successfully logged out !!";
+            errorMessge = "You have been successfully logged out !";
         }
         model.addAttribute("errorMessage", errorMessge);
         return "login";
