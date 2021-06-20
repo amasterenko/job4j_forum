@@ -26,10 +26,9 @@ The project shows how to create a custom database-backed UserDetailsService for 
 
 ![registartion](img/forum_main.png)  
 ![registartion](img/forum_post.png)  
-![registartion](img/forum_new_post.png)    
-![registartion](img/forum_post_edit.png)  
-![log in](img/forum_login.png)    
-![registartion](img/forum_registration.png)   
+![registartion](img/forum_new_post.png)  
+![registartion](img/forum_registration.png)  
+![log in](img/forum_login.png)  
 
 ### Configuration:
 Create a PostgreSQL database with the name _forum_ and set the DB credentials to _/resources/application.properties_.
