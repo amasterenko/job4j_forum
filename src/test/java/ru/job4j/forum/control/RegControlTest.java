@@ -54,7 +54,7 @@ public class RegControlTest {
                 .param("username","Username")
                 .param("password", "Password"))
                 .andDo(print())
-                .andExpect(status().is3xxRedirection());
+                .andExpect(status().isOk());
         ArgumentCaptor<User> argument = ArgumentCaptor.forClass(User.class);
         verify(userService).save(argument.capture());
         assertThat(argument.getValue().getUsername(), is("Username"));

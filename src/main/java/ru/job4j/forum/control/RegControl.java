@@ -27,15 +27,17 @@ public class RegControl {
 
     @PostMapping("/reg")
     public String save(@ModelAttribute User user, Model model) {
-        String errorMessage = null;
+        String message;
         if (users.findByUsername(user.getUsername()) != null) {
-            errorMessage = "Username already exists!";
-            model.addAttribute("errorMessage", errorMessage);
+            message = "Username already exists!";
+            model.addAttribute("message", message);
             return "reg";
         }
+        message = "Registration is completed. Please, go to the login page.";
+        model.addAttribute("message", message);
         user.setPassword(encoder.encode(user.getPassword()));
         users.save(user);
-        return "redirect:/login";
+        return "reg";
     }
 
     @GetMapping("/reg")

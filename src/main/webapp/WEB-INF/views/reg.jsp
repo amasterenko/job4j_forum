@@ -29,14 +29,15 @@
             <div class="row p-2 justify-content-center">
                 <h5>Registration:</h5>
             </div>
-
+            <div class="row p-2 justify-content-center">
+                <c:if test="${not empty message}">
+                    <div class="alert alert-warning d-flex align-items-center" role="alert">
+                            ${message}
+                    </div>
+                </c:if>
+            </div>
             <div class="row justify-content-center">
                 <form action="<c:url value='/reg'/>" method='POST'>
-                    <c:if test="${not empty errorMessage}">
-                        <div class="alert alert-warning d-flex align-items-center" role="alert">
-                                ${errorMessage}
-                        </div>
-                    </c:if>
                     <div class="row py-2">
                         <div class="col">
                             <label for="userName">User name</label>
